@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>criar nova viagem</h1>
+<div mat-dialog-content>
+
+    <mat-form-field>
+        <mat-label>id</mat-label>
+        <input matInput [(ngModel)]="data.position">
+      </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>nome da viagem</mat-label>
+    <input matInput [(ngModel)]="data.nome">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Data de saida</mat-label>
+    <input matInput [(ngModel)]="data.dataSaida">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Data de chegada</mat-label>
+    <input matInput [(ngModel)]="data.dataChegada">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>valor</mat-label>
+    <input matInput [(ngModel)]="data.valor">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>criar</button>
+</div>
